@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01BF76102B3286FE00FA1C18 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF760F2B3286FE00FA1C18 /* main.swift */; };
+		01BF76172B328EB900FA1C18 /* Jukebox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF76162B328EB900FA1C18 /* Jukebox.swift */; };
+		01BF76192B328ED400FA1C18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF76182B328ED400FA1C18 /* User.swift */; };
+		01BF761B2B328EDF00FA1C18 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF761A2B328EDF00FA1C18 /* Music.swift */; };
+		01BF761D2B328EF100FA1C18 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF761C2B328EF100FA1C18 /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		01BF760C2B3286FE00FA1C18 /* Desafio-Jukebox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Desafio-Jukebox"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF760F2B3286FE00FA1C18 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		01BF76162B328EB900FA1C18 /* Jukebox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jukebox.swift; sourceTree = "<group>"; };
+		01BF76182B328ED400FA1C18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		01BF761A2B328EDF00FA1C18 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		01BF761C2B328EF100FA1C18 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				01BF760F2B3286FE00FA1C18 /* main.swift */,
+				01BF76162B328EB900FA1C18 /* Jukebox.swift */,
+				01BF76182B328ED400FA1C18 /* User.swift */,
+				01BF761A2B328EDF00FA1C18 /* Music.swift */,
+				01BF761C2B328EF100FA1C18 /* Artist.swift */,
 			);
 			path = "Desafio-Jukebox";
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BF76172B328EB900FA1C18 /* Jukebox.swift in Sources */,
 				01BF76102B3286FE00FA1C18 /* main.swift in Sources */,
+				01BF76192B328ED400FA1C18 /* User.swift in Sources */,
+				01BF761D2B328EF100FA1C18 /* Artist.swift in Sources */,
+				01BF761B2B328EDF00FA1C18 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
