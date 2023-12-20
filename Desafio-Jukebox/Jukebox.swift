@@ -52,6 +52,14 @@ class Jukebox {
         }
     }
     
+    func mostPlayedMusics() -> [Music] {
+        let vector = availableMusics.sorted(by: {$0.timesPlayed > $1.timesPlayed})
+        return vector.filter {music in music.timesPlayed > 0}
+    }
     
+    func getMusics() -> [Music] {
+        return musics
+    }
+
     
 }
