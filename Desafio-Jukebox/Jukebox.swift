@@ -46,4 +46,12 @@ class Jukebox {
         return artistMusics
     }
     
+    func removeMusic(name: String) {
+        if let indexToRemove = musics.firstIndex(where: {$0.name == name}){
+            musics.remove(at: indexToRemove)
+        }
+    }
+    
+    
+    
 }
