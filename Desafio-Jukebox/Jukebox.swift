@@ -9,13 +9,47 @@ import Foundation
 
 class Jukebox {
     var availableMusics: [Music]
-    var musics: [Music]
+    var musicsToPlay: [Music]
     var musicPrice: Float
     
-    init(availableMusics: [Music], musics: [Music], musicPrice: Float) {
+    init(availableMusics: [Music], musicsToPlay: [Music], musicPrice: Float) {
         self.availableMusics = availableMusics
-        self.musics = musics
+        self.musicsToPlay = musicsToPlay
         self.musicPrice = musicPrice
+    }
+    
+    func playMusic(id: Int) {
+        if let music = searchMusic(id: id) {
+            print(music.description())
+        } else {
+            print("Music not available to play")
+        }
+    }
+    
+    func selectMusic(id: Int, user: User) {
+        if (user.credits >= musicPrice){
+            if let music = searchMusic(id: id) {
+                user.credits -= musicPrice
+                music.timesPlayed += 1
+                musicsToPlay.append(music)
+            }
+        }
+        else {
+            print("User doesn't have enough credits.")
+        }
+    }
+    
+    func selectMusic(name: String, user: User) {
+        if (user.credits >= musicPrice){
+            if let music = searchMusic(name: name) {
+                user.credits -= musicPrice
+                music.timesPlayed += 1
+                musicsToPlay.append(music)
+            }
+        }
+        else {
+            print("User doesn't have enough credits.")
+        }
     }
     
     func searchMusic(id: Int) -> Music? {
@@ -47,8 +81,8 @@ class Jukebox {
     }
     
     func removeMusic(name: String) {
-        if let indexToRemove = musics.firstIndex(where: {$0.name == name}){
-            musics.remove(at: indexToRemove)
+        if let indexToRemove = musicsToPlay.firstIndex(where: {$0.name == name}){
+            musicsToPlay.remove(at: indexToRemove)
         }
     }
     
@@ -57,8 +91,8 @@ class Jukebox {
         return vector.filter {music in music.timesPlayed > 0}
     }
     
-    func getMusics() -> [Music] {
-        return musics
+    func getMusicsToPlay() -> [Music] {
+        return musicsToPlay
     }
 
     
