@@ -18,4 +18,32 @@ class Jukebox {
         self.musicPrice = musicPrice
     }
     
+    func searchMusic(id: Int) -> Music? {
+        return availableMusics.first { $0.id == id }
+    }
+    
+    func searchMusic(name: String) -> Music? {
+        return availableMusics.first { $0.name == name }
+    }
+    
+    func searchAllAvailableMusics() -> [Music] {
+        return availableMusics
+    }
+    
+    func searchMusicByArtist(id: Int) -> [Music] {
+        let artistMusics = availableMusics.filter { music in
+            music.artist.id == id
+        }
+        
+        return artistMusics
+    }
+
+    func searchMusicByArtist(name: String) -> [Music] {
+        let artistMusics = availableMusics.filter { music in
+            music.artist.name == name
+        }
+        
+        return artistMusics
+    }
+    
 }
