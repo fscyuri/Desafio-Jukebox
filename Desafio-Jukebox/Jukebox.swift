@@ -8,14 +8,31 @@
 import Foundation
 
 class Jukebox {
-    var availableMusics: [Music]
-    var musicsToPlay: [Music]
-    var musicPrice: Float
+    var availableMusics = [Music]()
+    var musicsToPlay = [Music]()
+    var musicPrice: Int = 10
     
-    init(availableMusics: [Music], musicsToPlay: [Music], musicPrice: Float) {
-        self.availableMusics = availableMusics
-        self.musicsToPlay = musicsToPlay
-        self.musicPrice = musicPrice
+    init() {
+        setupJukebox()
+    }
+    
+    func setupJukebox() {
+        let artists = [
+            Artist(id: 0, name: "Elvis Presley"),
+            Artist(id: 1, name: "Queen"),
+            Artist(id: 2, name: "O Rappa"),
+            Artist(id: 3, name: "The Weeknd"),
+            Artist(id: 4, name: "Mamonas Assassinas")
+        ]
+
+        availableMusics = [
+            Music(id: 0, name: "Hound Dog", artist: artists[0], duration: 2.16),
+            Music(id: 1, name: "Somebody to Love", artist: artists[1], duration: 4.55, score: "8.2"),
+            Music(id: 2, name: "O que sobrou do céu", artist: artists[2], duration: 4.10, score: "7.5"),
+            Music(id: 3, name: "Auto-reverse", artist: artists[2], duration: 4.45),
+            Music(id: 4, name: "Blinding Lights", artist: artists[3], duration: 3.21),
+            Music(id: 3, name: "Vira-vira", artist: artists[4], duration: 2.23),
+        ]
     }
     
     func playMusic(id: Int) {
