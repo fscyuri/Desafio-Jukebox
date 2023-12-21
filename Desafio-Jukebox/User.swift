@@ -10,10 +10,10 @@ import Foundation
 class User {
     let id: Int
     var name: String
-    var credits: Float
+    var credits: Int
     var age: Int?
     
-    init(id: Int, name: String, credits: Float, age: Int? = nil) {
+    init(id: Int, name: String, credits: Int, age: Int? = nil) {
         self.id = id
         self.name = name
         self.credits = credits
